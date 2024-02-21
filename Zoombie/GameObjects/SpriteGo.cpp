@@ -82,6 +82,11 @@ void SpriteGo::SetFlipY(bool filp)
 	SetScale(scale);
 }
 
+void SpriteGo::Remove()
+{
+	delete this;
+}
+
 void SpriteGo::Reset() 
 {
 	sprite.setTexture(RES_MGR_TEXTURE.Get(textureId));

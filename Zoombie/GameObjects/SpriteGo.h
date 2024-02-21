@@ -19,7 +19,7 @@ public:
 	void SetScale(const sf::Vector2f& scale) override;
 	void SetFlipX(bool filp) override;
 	void SetFlipY(bool filp) override;
-
+	void Remove();
 	void Reset() override;
 	void Draw(sf::RenderWindow& window) override;
 
