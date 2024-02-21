@@ -49,7 +49,7 @@ public:
 	virtual void Release();
 
 	virtual void Reset();
-
+	void Remove();
 	virtual void Update(float dt);
 	virtual void Draw(sf::RenderWindow& window);
 

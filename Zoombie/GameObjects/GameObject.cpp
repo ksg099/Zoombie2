@@ -33,6 +33,11 @@ void GameObject::Reset()
 {
 }
 
+void GameObject::Remove()
+{
+	//delete this;
+}
+
 void GameObject::Update(float dt)
 {
 }

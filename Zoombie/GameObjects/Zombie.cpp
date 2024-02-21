@@ -54,13 +54,19 @@ void Zombie::Update(float dt)
 {
     SpriteGo::Update(dt);
    
+    sf::Vector2f playerPos = player->GetPosition(); //포지션 가져오고
+    sf::Vector2f zombiePos = GetPosition();
+    zombielook = playerPos - zombiePos; //방향
+    Utils::Normalize(zombielook);
+    zombielook += zombielook * speed * dt;
 
-    Zombie->SetPosition()
-
-    Utils::Normalize(Zombielook);
-
-    float angle = Utils::Angle(Zombielook);
+    float angle = Utils::Angle(zombielook);
     sprite.setRotation(angle);
+
+    if (playerPos == zombiePos)
+    {
+        Remove(player);
+    }
 }
 
 void Zombie::Draw(sf::RenderWindow& window)

@@ -21,9 +21,8 @@ protected:
 
 
 	int hp;
-	sf::Vector2f Zombielook = { 0.f, 0.f };
+	sf::Vector2f zombielook = { 0.f, 0.f };
 	Player* player;
-
 public:
 
 	static Zombie* Create(Types zombieType);
