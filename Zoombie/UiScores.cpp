@@ -16,12 +16,6 @@ void UiScores::SetScore(int score)
 	text.setString(textscore + std::to_string(score));
 }
 
-void UiScores::AddScore(int score)
-{
-	this->score -= score;
-	text.setString(textscore + std::to_string(score));
-
-}
 
 void UiScores::SetWave(int wave)
 {

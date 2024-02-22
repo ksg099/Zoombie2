@@ -15,6 +15,7 @@ protected:
 
 public:
 	UiScores(const std::string& name = "");
+	~UiScores() override = default;
 
 	void Reset() override;
 

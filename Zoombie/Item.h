@@ -1,6 +1,6 @@
 #pragma once
-#include "GameObject.h"
-class Item : public GameObject
+#include "SpriteGo.h"
+class Item : public SpriteGo
 {
 protected:
 	sf::Sprite Healtem;

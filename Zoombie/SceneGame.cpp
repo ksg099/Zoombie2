@@ -4,6 +4,9 @@
 #include "TileMap.h"
 #include "Zombie.h"
 #include "ZombieSpawner.h"
+#include "UiScores.h"
+
+
 
 SceneGame::SceneGame(SceneIds id) : Scene(id)
 {
@@ -33,6 +36,17 @@ void SceneGame::Init()
 	tilemap->sortLayer = -1;
 	AddGo(tilemap);
 
+
+	uiscores = new UiScores("uiscores");
+	uiscores->Set(fontResMgr.Get("fonts/zombiecontrol.ttf"), "uiscores", 50, sf::Color::White);
+	uiscores->SetOrigin(Origins::TL);
+	uiscores->SetPosition({ 0,0 });
+	AddGo(uiscore);
+
+	item = new UiScores("uiscores");
+	item->Set(GetTex.Get("fonts/zombiecontrol.ttf"), "uiscores", 50, sf::Color::White);
+	item->SetOrigin(Origins::TL);
+	item->SetPosition({ 0,0 });
 
 }
 
