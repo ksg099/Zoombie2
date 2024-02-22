@@ -80,12 +80,12 @@ float Utils::Magnitude(const sf::Vector2f& vec)
 	return std::sqrt(vec.x * vec.x + vec.y * vec.y); //빗변에 제곱한 값을루트 씌워서 리턴
 }
 
-void Utils::Normalize(const sf::Vector2f& vec) //벡터가 매개변수로 넘어오면 할당하면 호출한애를
+void Utils::Normalize(sf::Vector2f& vec) //벡터가 매개변수로 넘어오면 할당하면 호출한애를
 {
 	float mag = Magnitude(vec);
-	if (mag == 0.f)
+	if (mag != 0.f)
 	{
-		vec / mag;
+		vec /= mag;
 	}
 }
 

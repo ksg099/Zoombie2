@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Player.h"
+#include "Zombie.h"
 
 Player::Player(const std::string& name) : SpriteGo(name)
 {
@@ -28,9 +29,12 @@ void Player::Update(float dt)
 	sf::Vector2i mousePos = (sf::Vector2i)InputMgr::GetMousePos(); //마우스 위치 저장
 	sf::Vector2f mouseWorldPos = SCENE_MGR.GetCurrentScene()->ScreenToWorld(mousePos); //월드좌표로 저장
 	look = mouseWorldPos - position;
-	Utils::Normalize(look);
+	Utils::Normalize(look); //look벡터에 맞춰서 회전
 
+
+	SetRotation(Utils::Angle(look));
 	float angle = Utils::Angle(look);
+	
 	sprite.setRotation(angle);
 
 	direction.x = InputMgr::GetAxis(Axis::Horizontal);
@@ -41,7 +45,7 @@ void Player::Update(float dt)
 	{
 		Utils::Normalize(direction);
 	}
-	Translate(position + direction * speed * dt);
+	Translate(direction * speed * dt);
 
 	//if (InputMgr::GetKey(sf::Keyboard::W ))
 	//{

@@ -13,9 +13,36 @@ protected:
 	bool isFlipX = false;
 	bool isFlipY = false;
 
+	
 public:
 	GameObject(const std::string& name = "");
 	virtual ~GameObject();
+
+	static bool CompareDrawOrder(const GameObject& lhs, const GameObject& rhs)
+	{
+		if (lhs.sortLayer != rhs.sortLayer)
+		{
+			return lhs.sortLayer < rhs.sortLayer;
+		}
+		return lhs.sortOrder < rhs.sortOrder;
+	}
+
+	static bool CompareDrawOrder(const GameObject* lhs, const GameObject* rhs)
+	{
+		if (lhs->sortLayer != rhs->sortLayer)
+		{
+			return lhs->sortLayer < rhs->sortLayer;
+		}
+		return lhs->sortOrder < rhs->sortOrder;
+	}
+	//bool operator<(const GameObject& rhs); //연산자 재정의 
+	//{
+	//	if (sortLayer != rhs.sortLayer)
+	//	{
+	//		return sortLayer < rhs.sortLayer;
+	//	}
+	//	return sortOrder < rhs.sortOrder;
+	//}
 
 	bool GetActive() const { return active; }
 	virtual void SetActive(bool active) { this->active = active; }
@@ -53,7 +80,7 @@ public:
 	virtual void Draw(sf::RenderWindow& window);
 
 	std::string name = "";
-	int sortLayer = 0;
-	int sortOrder = 0;
+	int sortLayer = 0; //1차 정렬
+	int sortOrder = 0; //2차 정렬
 };
 

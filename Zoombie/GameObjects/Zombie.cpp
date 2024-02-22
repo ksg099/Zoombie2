@@ -58,16 +58,19 @@ void Zombie::Update(float dt)
     sf::Vector2f zombiePos = GetPosition();
     zombielook = playerPos - zombiePos; //방향
     Utils::Normalize(zombielook);
-    zombielook += zombielook * speed * dt;
 
+    Translate(zombielook * speed * dt);
     float angle = Utils::Angle(zombielook);
-    sprite.setRotation(angle);
+    //sprite.setRotation(angle);
+    SetRotation(Utils::Angle(zombielook));
+    
 
-    if (playerPos == zombiePos)
-    {
-        Remove(player);
-    }
+    //if (Utils::Distance(zombiePos, player->GetPosition()) < 50.f) //거리받아서 둘사이거리
+    //{
+    //    SCENE_MGR.GetCurrentScene()->RemoveGo(this);
+    //}
 }
+
 
 void Zombie::Draw(sf::RenderWindow& window)
 {

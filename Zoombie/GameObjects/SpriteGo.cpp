@@ -29,7 +29,7 @@ void SpriteGo::SetPosition(const sf::Vector2f& pos)
 
 void SpriteGo::Translate(const sf::Vector2f& delta)
 {
-	position = delta;
+	position += delta;
 	sprite.setPosition(position);
 }
 
@@ -82,10 +82,6 @@ void SpriteGo::SetFlipY(bool filp)
 	SetScale(scale);
 }
 
-void SpriteGo::Remove()
-{
-	delete this;
-}
 
 void SpriteGo::Reset() 
 {
