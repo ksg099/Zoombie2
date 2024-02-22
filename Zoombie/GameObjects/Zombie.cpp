@@ -15,17 +15,17 @@ Zombie* Zombie::Create(Types zombieType)
     case Zombie::Types::Bloater:
         zombie->textureId = "graphics/bloater.png";
         zombie->maxHp = 40;
-        zombie->speed = 100;
+        zombie->speed = 75;
         break;
     case Zombie::Types::Chase:
         zombie->textureId = "graphics/chaser.png";
         zombie->maxHp = 70;
-        zombie->speed = 75;
+        zombie->speed = 60;
         break;
     case Zombie::Types::Crawler:
         zombie->textureId = "graphics/crawler.png";
         zombie->maxHp = 20;
-        zombie->speed = 50;
+        zombie->speed = 30;
         break;
     }
     return zombie;

@@ -10,7 +10,7 @@ void SpriteGo::SetTexture(const std::string& textureId)
 {
 	this->textureId = textureId;
 	sprite.setTexture(RES_MGR_TEXTURE.Get(textureId));
-	//sprite.setTexture(ResourceMgr<sf::Texture>::Instance().Get(textureId));
+	//sprite.setTexture(ResourceMgr<sf::Texture>::Inst nce().Get(textureId));
 }
 
 void SpriteGo::SetRotation(float r)
@@ -29,7 +29,7 @@ void SpriteGo::SetPosition(const sf::Vector2f& pos)
 
 void SpriteGo::Translate(const sf::Vector2f& delta)
 {
-	position += delta;
+	position = delta;
 	sprite.setPosition(position);
 }
 
@@ -81,6 +81,8 @@ void SpriteGo::SetFlipY(bool filp)
 	isFlipY = filp;
 	SetScale(scale);
 }
+
+
 
 
 void SpriteGo::Reset() 

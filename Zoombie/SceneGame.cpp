@@ -11,6 +11,10 @@ SceneGame::SceneGame(SceneIds id) : Scene(id)
 
 void SceneGame::Init()
 {
+	Scene::Init();
+
+	
+
 	AddGo(new TileMap("Background"));
 
 	spawners.push_back(new  ZombieSpawner());
@@ -30,7 +34,6 @@ void SceneGame::Init()
 	AddGo(tilemap);
 
 
-	Scene::Init();
 }
 
 void SceneGame::Release()

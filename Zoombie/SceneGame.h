@@ -3,12 +3,14 @@
 
 class Player;
 class ZombieSpawner;
+class Item;
 
 
 class SceneGame : public Scene
 {
 protected:
 	Player* player = nullptr; //빈번하게 사용할거라서 포인터로 미리 선언
+
 	std::vector< ZombieSpawner*> spawners;
 
 

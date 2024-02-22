@@ -10,6 +10,7 @@ protected:
 	sf::Vector2f position = { 0.f, 0.f };
 	sf::Vector2f scale = { 1.f, 1.f };
 	float rotation = 0.f; // degree
+	
 	bool isFlipX = false;
 	bool isFlipY = false;
 

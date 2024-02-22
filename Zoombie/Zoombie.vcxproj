@@ -145,6 +145,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="GameObjects\GameObject.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
     </ClCompile>
@@ -161,6 +162,7 @@
     <ClCompile Include="GameObjects\TextGo.cpp" />
     <ClCompile Include="GameObjects\TileMap.cpp" />
     <ClCompile Include="GameObjects\Zombie.cpp" />
+    <ClCompile Include="UiScores.cpp" />
     <ClCompile Include="ZombieSpawner.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +173,7 @@
     <ClInclude Include="Framework\Singleton.h" />
     <ClInclude Include="Framework\Utils.h" />
     <ClInclude Include="GameObjects\GameObject.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="GameObjects\Player.h" />
     <ClInclude Include="SceneGame.h" />
@@ -182,6 +185,7 @@
     <ClInclude Include="GameObjects\TextGo.h" />
     <ClInclude Include="GameObjects\TileMap.h" />
     <ClInclude Include="GameObjects\Zombie.h" />
+    <ClInclude Include="UiScores.h" />
     <ClInclude Include="ZombieSpawner.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

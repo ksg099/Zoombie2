@@ -66,6 +66,12 @@
     <ClCompile Include="ZombieSpawner.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="UiScores.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Defines.h">
@@ -123,6 +129,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ZombieSpawner.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UiScores.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
