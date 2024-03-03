@@ -1,18 +1,19 @@
 #pragma once
 #include "Scene.h"
-#include "UiScores.h"
+#include "ScoreMgr.h"
+#include "ItemMgr.h"
 
 class Player;
 class ZombieSpawner;
-class Item;
-class UiScore;
+class ItemMgr;
+class ScoreMgr;
 
 class SceneGame : public Scene
 {
 protected:
 	Player* player = nullptr; //빈번하게 사용할거라서 포인터로 미리 선언
-	UiScore* uiscores = nullptr;
-	Item* item = nullptr;
+	ScoreMgr* scoremgr = nullptr;
+	ItemMgr* itemmgr = nullptr;
 
 	std::vector< ZombieSpawner*> spawners;
 

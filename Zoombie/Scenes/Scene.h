@@ -13,6 +13,7 @@ public:
 		Everything = 0xFFFFFFFF, //모든 비트가 1이다.
 	};
 
+
 protected:
 	SceneIds id;
 

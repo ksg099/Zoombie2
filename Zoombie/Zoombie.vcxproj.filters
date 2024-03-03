@@ -69,7 +69,13 @@
     <ClCompile Include="Item.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="UiScores.cpp">
+    <ClCompile Include="Bullet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreMgr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemMgr.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -131,10 +137,13 @@
     <ClInclude Include="ZombieSpawner.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
+    <ClInclude Include="Bullet.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="UiScores.h">
+    <ClInclude Include="ScoreMgr.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemMgr.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
